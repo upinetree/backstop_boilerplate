@@ -38,7 +38,7 @@ and write your scenarios in `backstop_data/scenarios` !
 
 ## Features
 
-Now, following features only available for the engine `chromy`.
+Now, following features only available on the engine `chromy`.
 (I want to support puppet too ...)
 
 ### Multiple Click Selectors
