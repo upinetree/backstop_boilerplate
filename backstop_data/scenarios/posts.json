@@ -4,6 +4,10 @@
     "url": "http://localhost:3000/posts"
   },
   {
+    "label": "posts show",
+    "url": "http://localhost:3000/posts/${post_id}"
+  },
+  {
     "label": "posts edit",
     "url": "http://localhost:3000/posts/${post_id}/edit"
   }

@@ -1,3 +1,18 @@
+<style type="text/css" media="all">
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: solid 1px gray;
+    border-radius: 2px;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background: gray;
+  }
+</style>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,5 +25,5 @@
   <%= @post.body %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post), data: { test: 'edit-link' } %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Edit', edit_post_path(@post), data: { test: 'edit-link' }, class: 'btn' %> |
+<%= link_to 'Back', posts_path, class: 'btn' %>
