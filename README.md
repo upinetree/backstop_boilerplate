@@ -12,6 +12,8 @@ $ bin/setup
 $ bin/rails s
 ```
 
+This boilerplate uses the Ruby on Rails application for the test target, but you can use any other application that works on the browser.
+
 ## Usage
 
 ```console
