@@ -1,8 +1,12 @@
-var fs = require('fs');
+let fs = require("fs");
+const defaultCookiePath = "backstop_data/engine_scripts/cookies.json";
 
 module.exports = function (chromy, scenario) {
-  var cookies = [];
-  var cookiePath = scenario.cookiePath;
+  let cookies = [];
+  const cookiePath =
+    scenario.cookiePath === "" ?
+      "" :
+      scenario.cookiePath || defaultCookiePath;
 
   // READ COOKIES FROM FILE IF EXISTS
   if (fs.existsSync(cookiePath)) {
@@ -11,12 +15,17 @@ module.exports = function (chromy, scenario) {
 
   // MUNGE COOKIE DOMAIN FOR CHROMY USAGE
   cookies = cookies.map(cookie => {
-    cookie.url = 'https://' + cookie.domain;
+    cookie.url = "http://" + cookie.domain;
     delete cookie.domain;
     return cookie;
   });
 
   // SET COOKIES VIA CHROMY
   chromy.setCookie(cookies);
-  console.log('Cookie state restored with:', JSON.stringify(cookies, null, 2));
+
+  if (process.env.VERBOSE) {
+    console.log("Cookie state restored with:", JSON.stringify(cookies, null, 2));
+  } else {
+    console.log("Cookie state restored.");
+  }
 };
