@@ -1,5 +1,7 @@
 {
   "name": "backstop_boilerplate",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "backstopjs": "^3.2.15"
+  }
 }
