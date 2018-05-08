@@ -28,3 +28,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# BackstopJS
+/backstop_data/bitmaps_reference
+/backstop_data/bitmaps_test
+/backstop_data/html_report
+/backstop_data/engine_scripts/cookies.json
