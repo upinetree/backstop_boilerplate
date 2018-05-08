@@ -1,9 +1,11 @@
 module.exports = function (chromy, scenario) {
-  var hoverSelector = scenario.hoverSelector;
-  var clickSelector = scenario.clickSelector;
-  var postInteractionWait = scenario.postInteractionWait; // selector [str] | ms [int]
+  const hoverSelector = scenario.hoverSelector;
+  const clickSelectors = (scenario.clickSelectors || [scenario.clickSelector]).filter(x => x);
+  const postInteractionWait = scenario.postInteractionWait; // selector [str] | ms [int]
 
   if (hoverSelector) {
+    console.log(`INFO: hover ${hoverSelector}`);
+
     chromy
       .wait(hoverSelector)
       .rect(hoverSelector)
@@ -12,11 +14,13 @@ module.exports = function (chromy, scenario) {
       });
   }
 
-  if (clickSelector) {
+  clickSelectors.forEach((clickSelector) => {
+    console.log(`INFO: click ${clickSelector}`);
+
     chromy
       .wait(clickSelector)
       .click(clickSelector);
-  }
+  });
 
   if (postInteractionWait) {
     chromy.wait(postInteractionWait);
