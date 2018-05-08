@@ -16,8 +16,9 @@
   "onReadyScript": "chromy/onReady.js",
   "scenarios": [
     {
-      "label": "post",
-      "url": "http://localhost:3000/posts/1"
+      "label": "multiple click selectors",
+      "url": "http://localhost:3000/posts/1",
+      "clickSelectors": ["[data-test='edit-link']", "[data-test='back-link']"]
     }
   ],
   "paths": {
