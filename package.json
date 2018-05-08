@@ -1,6 +1,9 @@
 {
   "name": "backstop_boilerplate",
   "private": true,
+  "scripts": {
+    "backstop": "node ./backstop_data/runner.js"
+  },
   "dependencies": {
     "backstopjs": "^3.2.15"
   }

@@ -1,0 +1,10 @@
+[
+  {
+    "label": "posts index",
+    "url": "http://localhost:3000/posts"
+  },
+  {
+    "label": "posts edit",
+    "url": "http://localhost:3000/posts/1/edit"
+  }
+]
