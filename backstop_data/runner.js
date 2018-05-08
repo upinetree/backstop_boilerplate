@@ -32,10 +32,9 @@ if (catchableCommnads.includes(command)) {
   const filter = options["filter"];
   const config = require("../backstop.json");
   const scenarios = require("./scenarios");
-  // const interpolate = require("./interpolate");
+  const interpolate = require("./interpolate");
 
-  // config.scenarios = interpolate(scenarios);
-  config.scenarios = scenarios;
+  config.scenarios = interpolate(scenarios);
 
   backstop(command, {
     filter,

@@ -1,7 +1,7 @@
 [
   {
     "label": "multiple click selectors",
-    "url": "http://localhost:3000/posts/1",
+    "url": "http://localhost:3000/posts/${post_id}",
     "clickSelectors": ["[data-test='edit-link']", "[data-test='back-link']"]
   }
 ]

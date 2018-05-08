@@ -5,6 +5,6 @@
   },
   {
     "label": "posts edit",
-    "url": "http://localhost:3000/posts/1/edit"
+    "url": "http://localhost:3000/posts/${post_id}/edit"
   }
 ]
